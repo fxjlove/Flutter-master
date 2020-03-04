@@ -11,5 +11,3 @@ void main(){
   ),
   ));
 }
-
-No source control providers registered
