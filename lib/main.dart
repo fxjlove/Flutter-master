@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Flutter Demo~~~~~~1'
+            'Flutter Demo~~~~~~2'
           ),
         ),
 
