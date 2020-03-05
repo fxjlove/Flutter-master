@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'res/listData.dart';
 
-//Flutter页面布局 Paddiing Row Column Expanded组件
+//Flutter页面布局 Paddiing Row Column Expanded组件 -- Flutter Paddiing组件  
 
 //也可以简写
 void main() => runApp(MyApp());
