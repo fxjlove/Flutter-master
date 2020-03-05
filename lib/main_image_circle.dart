@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//  Flutter 图片组件Image -- 本地图片
+//  Flutter 图片组件Image -- 远程图片(flutter实现圆角以及实现圆形图片)
 
 //flutter实现圆角以及实现圆形图片
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter Demo~~~~~~4'),
+          title: Text('Flutter Demo~~~~~~3'),
         ),
         body: HomeContent(),
       ),
@@ -32,14 +32,25 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        //本地图片
-        // child: Image.asset('images/2.0x/box_not_click_icon.png')
-        child: Image.asset(
-          'images/logagain.png',
-          fit: BoxFit.cover,
-        ),
-        width: 100,
-        height: 100,
+        width: 300,
+        height: 300,
+
+        //设置容器背景颜色
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          //圆角
+          // borderRadius: BorderRadius.all(
+          //   Radius.circular(150)
+          // )
+
+          //flutter实现圆角以及实现圆形图片
+          borderRadius: BorderRadius.circular(150),
+          image: DecorationImage(
+            image: NetworkImage("https://goss.cfp.cn/creative/vcg/800/new/VCG21gic18549737.jpg?x-oss-process=image/format,jpg/interlace,1"),
+            fit: BoxFit.cover
+             )
+          
+          ),
       ),
     );
   }
