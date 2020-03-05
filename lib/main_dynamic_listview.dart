@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'res/listData.dart';
-
 //Flutter ListView动态列表组件 以及循环动态数据 -- 动态列表
 
 //也可以简写
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('动态列表1'),
+          title: Text('动态列表'),
         ),
         body: HomeContent(),
       ),
@@ -28,20 +26,24 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
-
-
 //自定义方法
- List<Widget> _getData(){
-  //  var tempList = listData.map((){})
-   var tempList = listData.map((value){
-      return ListTile(
-        leading: Image.network(value["imageUrl"]),
-        title:Text(value["title"]),
-        subtitle: Text(value['author']),
-      );
-   });
-   return tempList.toList();
- }
+
+  List<Widget> _getData() {
+    return [
+      ListTile(
+        title: Text('我是一个列表'),
+      ),
+      ListTile(
+        title: Text('我是一个列表'),
+      ),
+      ListTile(
+        title: Text('我是一个列表'),
+      ),
+      ListTile(
+        title: Text('我是一个列表'),
+      ),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,7 @@ class HomeContent extends StatelessWidget {
       // ],
 
 
-      children: this._getData(),
+      children: this._getData()
     );
   }
 }
