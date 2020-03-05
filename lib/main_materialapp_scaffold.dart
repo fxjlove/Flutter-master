@@ -48,6 +48,6 @@ class HomeContent extends StatelessWidget {
         ),
       ),
     );
-    ;
+    
   }
 }

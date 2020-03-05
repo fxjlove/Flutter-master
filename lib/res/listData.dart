@@ -34,9 +34,5 @@ List listData = [
     "author": "Google",
     "imageUrl": "https://www.itying.com/images/flutter/7.png"
   },
-  {
-    "title": "HH",
-    "author": "Google",
-    "imageUrl": "https://www.itying.com/images/flutter/9.png"
-  }
+  
 ];

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'res/listData.dart';
 
 //Flutter ListView动态列表组件 以及循环动态数据 -- 动态列表
 
@@ -39,7 +38,6 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ListView.builder(
       itemCount: this.list.length,
       itemBuilder: (context,index){

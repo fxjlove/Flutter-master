@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('动态GridView--GridView.builder'),
+          title: Text('动态GridView GridView.builder'),
         ),
         body: HomeContent(),
       ),

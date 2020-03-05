@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Flutter ListView动态列表组件 以及循环动态数据 -- 动态列表
+
+//Flutter GridView组件 以及动态GridView
 
 //也可以简写
 void main() => runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('动态列表'),
+          title: Text('Flutter GridView组件 以及动态GridView'),
         ),
         body: HomeContent(),
       ),
@@ -26,40 +27,33 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
-  
-//自定义方法
-  List<Widget> _getData() {
-    //定义一个空的集合
+  List<Widget> _getListData() {
     List<Widget> list = new List();
-    for(var i = 0;i<20;i++){
-      list.add(ListTile(
-        title:Text("我是$i列表")
+    for (var i = 0; i < 20; i++) {
+      list.add(Container(
+        alignment: Alignment.center,
+        child: Text(
+          '这是第$i条数据',
+          style: TextStyle(color: Colors.white, fontSize: 14),
+        ),
+        color: Colors.blue,
+        height: 400,//设置高度没有反应
       ));
     }
-  return list.toList();
-
+    return list;
   }
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      // children: <Widget>[
-      //   ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      // ],
+    return GridView.count(
 
-
-      children: this._getData()
+      
+      crossAxisSpacing: 20.0,//水平Widget之间距离
+      mainAxisSpacing: 20.0,//锤子Widget之间距离
+      padding: EdgeInsets.all(10),
+      crossAxisCount: 3, //一行的Widget数量
+      childAspectRatio: 0.7, //宽度和高度的比例
+      children: this._getListData(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Flutter ListView动态列表组件 以及循环动态数据 -- 动态列表
+
+//Flutter GridView组件 以及动态GridView
 
 //也可以简写
 void main() => runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('动态列表'),
+          title: Text('Flutter GridView组件 以及动态GridView'),
         ),
         body: HomeContent(),
       ),
@@ -26,40 +27,28 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
-  
-//自定义方法
-  List<Widget> _getData() {
-    //定义一个空的集合
-    List<Widget> list = new List();
-    for(var i = 0;i<20;i++){
-      list.add(ListTile(
-        title:Text("我是$i列表")
-      ));
-    }
-  return list.toList();
 
-  }
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      // children: <Widget>[
-      //   ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      //    ListTile(
-      //     title: Text('我是一个列表'),
-      //   ),
-      // ],
+    return GridView.count(
 
+      //网格有几列
+      crossAxisCount: 3,
 
-      children: this._getData()
+      children: <Widget>[
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+        Text('这是一个文本'),
+      ],
     );
   }
 }
