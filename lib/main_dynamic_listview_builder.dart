@@ -28,27 +28,26 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
+  List list = new List();
 
-//自定义方法
-Widget _getListData(context,index){
-  return ListTile(
-            leading: Image.network(listData[index]["imageUrl"]),
-            subtitle: Text(listData[index]["author"]),
-            title: Text(listData[index]["title"]),
-          );
-}
+  HomeContent() {
+    for (var i = 0; i < 20; i++) {
+      // this.list.add(ListTile(title: Text("我是$i列表")));
+      this.list.add("我是$i条");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return ListView.builder(
-      itemCount: listData.length,
-      // itemBuilder: (context,index){
-      //     return ListTile(
-      //       title: Text(listData[index]["title"]),
-      //     );
-      // },
-
-      itemBuilder: this._getListData,
+      itemCount: this.list.length,
+      itemBuilder: (context,index){
+          // return this.list[index];
+          return ListTile(
+            title: Text(this.list[index]),
+          );
+      },
     );
   }
 }
