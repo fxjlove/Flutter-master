@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter实现布局案例 '),
+          title: Text('Flutter实现布局案例'),
         ),
         body: HomeContent(),
       ),
