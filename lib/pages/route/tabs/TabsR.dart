@@ -13,8 +13,8 @@ class RouteTabs extends StatefulWidget {
 class _RouteTabsState extends State<RouteTabs> {
   int _currentIndex = 0;
   List _pageList=[
-      HomePage(),
-      CategoryPage(),
+      HomePageR(),
+      CategoryPageR(),
       SettingPage(),
   ];
       

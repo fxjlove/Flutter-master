@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
             MyButton(
               'Flutter中的路由',
                pressed: () {
-                print("自定义按钮");
                  //路由跳转
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => MainApp(),

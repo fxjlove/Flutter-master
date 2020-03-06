@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import '../SearchR.dart';
 
 /**
  * 首页
  */
-class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+class HomePageR extends StatefulWidget {
+  HomePageR({Key key}) : super(key: key);
 
-  _HomePageState createState() => _HomePageState();
+  _HomePageRState createState() => _HomePageRState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageRState extends State<HomePageR> {
   @override
   Widget build(BuildContext context) {
     // return Text('我是首页组件');
@@ -20,6 +21,16 @@ class _HomePageState extends State<HomePage> {
         RaisedButton(
           child: Text('跳转到搜索页面'),
           onPressed: (){
+
+
+              //路由跳转(页面跳转)
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context)=>SearchPage(),
+                )
+              );
+
+
 
           },
           color: Theme.of(context).accentColor,
