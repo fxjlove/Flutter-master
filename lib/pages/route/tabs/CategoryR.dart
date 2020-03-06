@@ -45,6 +45,30 @@ class _CategoryPageRState extends State<CategoryPageR> {
           textTheme: ButtonTextTheme.primary,
 
         ),
+        RaisedButton(
+          child: Text('命名路由(跳转到搜索页面)'),
+          onPressed: (){
+              //路由跳转
+              Navigator.pushNamed(context, '/search');
+           
+
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+
+        ),
+        RaisedButton(
+          child: Text('命名路由(跳转到表单页面)'),
+          onPressed: (){
+              //路由跳转
+              Navigator.pushNamed(context, '/form');
+           
+
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+
+        ),
       ],
     );
   }
