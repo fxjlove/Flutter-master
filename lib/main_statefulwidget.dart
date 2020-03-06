@@ -29,62 +29,32 @@ Flutter中自定义组件其实就是一个类,这个类需要继承StatelessWid
 StatelessWidget是无状态组件,状态不可变的widget
 StatefulWidget是有状态组件,持有的状态可能在widget生命周期改变,通俗的讲,如果我们想要改变页面中的数据的话这个时候就需要用到StatefulWidget */
 
-// //stateless
-// class HomePage extends StatelessWidget {
+//stateless
+class HomePage extends StatelessWidget {
 
-//  int countNum = 1;
+ int countNum = 1;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//      children: <Widget>[
-//        SizedBox(height: 200,),
-//        Text('${this.countNum}'),
-//          SizedBox(height: 20,),
-//        RaisedButton(
-//          child: Text('按钮'),
-//          onPressed: (){
-//            //setState() //错误写法 没法改变里面的数据
-//             this.countNum++;
-//             print(this.countNum);
-//          },
-
-//        )
-//      ],
-//     );
-//   }
-// }
-
-//StatefulWidget有状态组件
-//自定义有状态组件
-class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
-
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int countNum = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget>[
-        SizedBox(height: 200),
-        Chip(
-          label: Text('${this.countNum}'),
-        ),
-        SizedBox(height: 20),
-        RaisedButton(
-          child: Text('按钮'),
-          onPressed: () {
-            //setState只有有状态组件里面才有
-            setState(() {
-              this.countNum++;
-              print(this.countNum);
-            });
-          },
-        )
-      ],
+     children: <Widget>[
+       SizedBox(height: 200,),
+       Text('${this.countNum}'),
+         SizedBox(height: 20,),
+       RaisedButton(
+         child: Text('按钮'),
+         onPressed: (){
+           //setState() //错误写法 没法改变里面的数据
+            this.countNum++;
+            print(this.countNum);
+         },
+
+       )
+     ],
     );
   }
 }
+
+
+
+
