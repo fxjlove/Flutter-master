@@ -1,16 +1,16 @@
 
 import 'package:flutter/material.dart';
-import './Home.dart';
-import './Category.dart';
-import './Setting.dart';
+import './HomeR.dart';
+import './CategoryR.dart';
+import './SettingR.dart';
 
-class Tabs extends StatefulWidget {
-  Tabs({Key key}) : super(key: key);
+class RouteTabs extends StatefulWidget {
+  RouteTabs({Key key}) : super(key: key);
 
-  _TabsState createState() => _TabsState();
+  _RouteTabsState createState() => _RouteTabsState();
 }
 
-class _TabsState extends State<Tabs> {
+class _RouteTabsState extends State<RouteTabs> {
   int _currentIndex = 0;
   List _pageList=[
       HomePage(),
@@ -23,7 +23,7 @@ class _TabsState extends State<Tabs> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Flutter 中自定义有状态组件  '),
+          title: Text('Flutter中的路由'),
         ),
         body: this._pageList[this._currentIndex],
         bottomNavigationBar: BottomNavigationBar(
