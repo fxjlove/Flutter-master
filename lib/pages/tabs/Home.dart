@@ -13,34 +13,34 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-   return Container(
+    return Container(
         padding: EdgeInsets.all(10),
         child: Wrap(
           //间距
           spacing: 10,
           runSpacing: 5,
-          
-          children: <Widget>[
-            MyButton(
-              'Flutter中的路由',
-               pressed: () {
-                 //路由跳转
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => MainApp(),
-                  ));
 
-              }
-              ),
-           
+          children: <Widget>[
+            MyButton('Flutter中的路由', pressed: () {
+              //路由跳转
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => MainApp(),
+              ));
+            }),
+            MyButton('自定义AppBar 定义顶部Tab切换', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/appBarDemo');
+            }),
           ],
         ));
   }
 }
+
 //封装按钮 https://www.cnblogs.com/yiweiyihang/p/11512472.html
 class MyButton extends StatelessWidget {
   final String text;
   final pressed;
-  const MyButton(this.text, {Key key,this.pressed = null}) : super(key: key);
+  const MyButton(this.text, {Key key, this.pressed = null}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class MyButton extends StatelessWidget {
       // onPressed: () {
 
       // },
-       onPressed: this.pressed,
+      onPressed: this.pressed,
     );
   }
 }
