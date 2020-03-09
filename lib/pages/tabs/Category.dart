@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Flutter AppBar中自定义TabBar实现顶部Tab切换
 class CategoryPage extends StatefulWidget {
   CategoryPage({Key key}) : super(key: key);
 
@@ -22,6 +23,7 @@ class _CategoryPageState extends State<CategoryPage> {
               children: <Widget>[
                 Expanded(
                   child: TabBar(
+                    // isScrollable: true,//如果多个按钮的话可以滑动
                     indicatorColor: Colors.orange,//指示器颜色
                     labelColor: Colors.orange,//指示器文字颜色
                     unselectedLabelColor: Colors.white,
