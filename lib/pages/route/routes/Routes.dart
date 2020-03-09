@@ -8,6 +8,12 @@ import '../SearchR.dart';
 import '../ProductR.dart';
 import '../CustomerR.dart';
 
+import '../user/Login.dart';
+import '../user/RegisterFirst.dart';
+import '../user/RegisterSecond.dart';
+import '../user/RegisterThird.dart';
+
+
 
 
 //配置路由
@@ -18,6 +24,11 @@ final routes={
       '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
        '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       '/search':(context,{arguments})=>SearchPage(arguments:arguments),
+
+      '/login':(context)=>LoginPage(),
+      '/registerFirst':(context)=>RegisterFirstPage(),
+      '/registerSecond':(context)=>RegiterSencondPage(),
+      '/registerThird':(context)=>RegiterThirdPage(),
 };
 
 //固定写法

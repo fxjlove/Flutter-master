@@ -10,7 +10,7 @@ class ProductDetailPage extends StatefulWidget {
 }
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
-  Map arguments;
+  final Map arguments;
 
   _ProductDetailPageState({this.arguments});
 

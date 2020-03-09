@@ -4,13 +4,22 @@ import './CategoryR.dart';
 import './SettingR.dart';
 
 class RouteTabs extends StatefulWidget {
-  RouteTabs({Key key}) : super(key: key);
 
-  _RouteTabsState createState() => _RouteTabsState();
+final index ;
+
+  RouteTabs({Key key,this.index = 0 }) : super(key: key);
+
+  _RouteTabsState createState() => _RouteTabsState(this.index);
 }
 
 class _RouteTabsState extends State<RouteTabs> {
+
   int _currentIndex = 0;
+
+_RouteTabsState(index){
+  this._currentIndex=index;
+}
+
   List _pageList = [
     CategoryPageR(),
     HomePageR(),
