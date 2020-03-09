@@ -27,9 +27,13 @@ class _HomePageState extends State<HomePage> {
                 builder: (context) => MainApp(),
               ));
             }),
-            MyButton('自定义AppBar 定义顶部Tab切换', pressed: () {
+            MyButton('AppBar自定义顶部按钮图标、颜色', pressed: () {
               //路由跳转
               Navigator.pushNamed(context, '/appBarDemo');
+            }),
+            MyButton('自定义AppBar 定义顶部Tab切换', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/topTab');
             }),
           ],
         ));

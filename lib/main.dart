@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       //去掉debug图标
       debugShowCheckedModeBanner: false,
 
-       initialRoute: '/appBarDemo',     //初始化的时候加载的路由
+      //  initialRoute: '/appBarDemo',     //初始化的时候加载的路由
+       initialRoute: '/',     //初始化的时候加载的路由
       onGenerateRoute: onGenerateRoute,
       
     );

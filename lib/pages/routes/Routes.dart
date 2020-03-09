@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../tabs/Tabs.dart';
 import '../appbar/AppBar.dart';
+import '../appbar/TopTab.dart';
 
 
 
@@ -10,7 +11,7 @@ import '../appbar/AppBar.dart';
 final routes={
       '/':(context)=>Tabs(),
       '/appBarDemo':(context)=>AppBarTabPage(),
-      // '/product':(context)=>ProductPage(),
+      '/topTab':(context)=>TopTabPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),
