@@ -69,6 +69,54 @@ class _CategoryPageRState extends State<CategoryPageR> {
           textTheme: ButtonTextTheme.primary,
 
         ),
+
+         RaisedButton(
+          child: Text('命名路由(跳转到搜索页面传值)'),
+          onPressed: (){
+             //路由跳转
+              Navigator.pushNamed(context, '/search',arguments: {
+                "id":123
+              });
+           
+
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+
+        ),
+
+         RaisedButton(
+          child: Text('命名路由(跳转到商品页面)'),
+          onPressed: (){
+             //路由跳转
+              Navigator.pushNamed(context, '/product');
+           
+
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+
+        ),
+        RaisedButton(
+          child: Text('命名路由(跳转到客户页面传值)'),
+          onPressed: (){
+             //路由跳转
+
+             //不传值
+              Navigator.pushNamed(context, '/customer');
+
+            //传值
+            // Navigator.pushNamed(context, '/customer',arguments: {
+            //     "id":123
+            //   });
+
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+
+        ),
+
+        
       ],
     );
   }
