@@ -43,6 +43,22 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/button');
             }),
+             MyButton('TextField文本框组件  ', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/textField');
+            }),
+             MyButton('Checkbox、CheckboxListTile多选框组件', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/checkBox');
+            }),
+             MyButton('Radio、RadioListTile单选按钮组件', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/radio');
+            }),
+            MyButton('表单演示', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/forms');
+            }),
           ],
         ));
   }

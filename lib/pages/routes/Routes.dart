@@ -7,6 +7,10 @@ import '../appbar/TopTab.dart';
 import '../appbar/TabBarController.dart';
 import '../User.dart';
 import '../button/Button.dart';
+import '../form/CheckBox.dart';
+import '../form/Radio.dart';
+import '../form/TextField.dart';
+import '../form/Forms.dart';
 
 
 
@@ -18,6 +22,10 @@ final routes={
       '/tabBarController':(context)=>TabBarControllerPage(),
       '/user':(context)=>UserPage(),
       '/button':(context)=>ButtonPage(),
+      '/checkBox':(context)=>CheckBoxPage(),
+      '/radio':(context)=>RadioPage(),
+      '/textField':(context)=>TextFieldPage(),
+      '/forms':(context)=>FormsPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),
