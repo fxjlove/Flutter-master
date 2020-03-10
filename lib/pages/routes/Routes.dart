@@ -5,6 +5,8 @@ import '../tabs/Tabs.dart';
 import '../appbar/AppBar.dart';
 import '../appbar/TopTab.dart';
 import '../appbar/TabBarController.dart';
+import '../User.dart';
+import '../button/Button.dart';
 
 
 
@@ -14,6 +16,8 @@ final routes={
       '/appBarDemo':(context)=>AppBarTabPage(),
       '/topTab':(context)=>TopTabPage(),
       '/tabBarController':(context)=>TabBarControllerPage(),
+      '/user':(context)=>UserPage(),
+      '/button':(context)=>ButtonPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),
