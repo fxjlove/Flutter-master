@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/pages/date/DatePicker.dart';
 
 
 import '../tabs/Tabs.dart';
@@ -11,6 +12,7 @@ import '../form/CheckBox.dart';
 import '../form/Radio.dart';
 import '../form/TextField.dart';
 import '../form/Forms.dart';
+import '../date/DatePicker.dart';
 
 
 
@@ -26,6 +28,7 @@ final routes={
       '/radio':(context)=>RadioPage(),
       '/textField':(context)=>TextFieldPage(),
       '/forms':(context)=>FormsPage(),
+      '/datePicker':(context)=>DatePickerPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),

@@ -59,6 +59,10 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/forms');
             }),
+              MyButton('日期组件', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/datePicker');
+            }),
           ],
         ));
   }
