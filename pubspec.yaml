@@ -26,7 +26,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   english_words: ^3.1.0  #命令行中执行 flutter packages get 即可 command+s就会自己执行这个明令
-  flutter_cupertino_date_picker: ^1.0.2
+  flutter_cupertino_date_picker: ^1.0.2 #第三方日期选择插件
   date_format: ^1.0.6
 
 

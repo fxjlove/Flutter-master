@@ -1,6 +1,7 @@
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class DatePickerPage extends StatefulWidget {
   DatePickerPage({Key key}) : super(key: key);
@@ -53,6 +54,76 @@ class _DatePickerPageState extends State<DatePickerPage> {
       this._nowTime = result;
     });
   }
+
+
+
+
+
+DateTime _dateTime = DateTime.now();
+ _showDatePicker3() {
+   DatePicker.showDatePicker(
+     context,
+     pickerTheme: DateTimePickerTheme(
+       showTitle: true,
+       confirm: Text('确定', style: TextStyle(color: Colors.red)),
+       cancel: Text('取消',style: TextStyle(color: Colors.cyan)),
+     ),
+     minDateTime: DateTime.parse('1980-05-12'),
+     maxDateTime: DateTime.parse('2100-05-12'),
+     initialDateTime: DateTime.now(),
+     dateFormat: 'yyyy-MMMM-dd',
+     locale: DateTimePickerLocale.zh_cn,
+     onCancel: (){
+       debugPrint('onCancel');
+     },
+    //  onChange: (dateTime,List<int> index){
+
+    //  },
+     onConfirm: (dateTime,List<int> index){
+        setState(() {
+            _dateTime = dateTime;
+        });
+     }
+
+     
+   );
+ }
+
+DateTime _dateTime4 = DateTime.now();
+  _showDatePicker4() {
+   DatePicker.showDatePicker(
+     context,
+     pickerTheme: DateTimePickerTheme(
+       showTitle: true,
+       confirm: Text('确定', style: TextStyle(color: Colors.red)),
+       cancel: Text('取消',style: TextStyle(color: Colors.cyan)),
+     ),
+     minDateTime: DateTime.parse('1980-05-12'),
+     maxDateTime: DateTime.parse('2100-05-12'),
+     initialDateTime: DateTime.now(),
+     //dateFormat: 'yyyy-MMMM-dd',
+
+      dateFormat: 'yyyy年M月d日  EEE,H时:m分',
+      pickerMode: DateTimePickerMode.datetime,
+
+
+     locale: DateTimePickerLocale.zh_cn,
+     onCancel: (){
+       debugPrint('onCancel');
+     },
+    //  onChange: (dateTime,List<int> index){
+
+    //  },
+     onConfirm: (dateTime,List<int> index){
+        setState(() {
+            _dateTime4 = dateTime;
+        });
+     }
+
+     
+   );
+ }
+
 
   @override
   void initState() {
@@ -118,7 +189,79 @@ class _DatePickerPageState extends State<DatePickerPage> {
                 onTap: _showTimerPicker,
               )
             ],
-          )
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              //InkWell当作按钮组件,没有样式
+              InkWell(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    // Text('2019-06-14'),
+                    //  Text("${_dateTime}"),
+                     Text("${formatDate(_dateTime, [
+                      yyyy,
+                      '年',
+                      'mm',
+                      '月',
+                      'dd'
+                    ])}"),
+                    
+                    Icon(Icons.arrow_drop_down),
+                  ],
+                ),
+                // onTap: () {
+                //   print('打开日期组件');
+                // },
+                onTap: _showDatePicker3,
+              ),
+              InkWell(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    // Text("10:30"),
+                    Text("${_nowTime.format(context)}"),
+                    Icon(Icons.arrow_drop_down),
+                  ],
+                ),
+                onTap: _showTimerPicker,
+              )
+            ],
+          ),
+           SizedBox(
+            height: 40,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              //InkWell当作按钮组件,没有样式
+              InkWell(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    // Text('2019-06-14'),
+                    //  Text("${_dateTime}"),
+                    //  Text("${formatDate(_dateTime4, [
+                    //   yyyy,
+                    //   '年',
+                    //   'mm',
+                    //   '月',
+                    //   'dd'
+                    // ])}"),
+                    Text("${formatDate(_dateTime4,[yyyy,'年',mm,'月',dd,'  ' ,HH,':',mm ])}"),
+                    
+                    Icon(Icons.arrow_drop_down),
+                  ],
+                ),
+                onTap: _showDatePicker4,
+              ),
+              
+            ],
+          ),
         ],
       ),
     );
