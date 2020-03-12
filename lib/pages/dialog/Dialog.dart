@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import './components/MyDialog.dart';
 
 class DialogPage extends StatefulWidget {
   DialogPage({Key key}) : super(key: key);
@@ -139,6 +140,7 @@ class _DialogPageState extends State<DialogPage> {
         fontSize: 16.0
     );
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -168,6 +170,20 @@ class _DialogPageState extends State<DialogPage> {
             RaisedButton(
               child: Text('toast-fulttertoast第三方库'),
               onPressed: _toast,
+            ),
+            SizedBox(height: 20),
+            RaisedButton(
+              child: Text('自定义Dialog'),
+              onPressed: (){
+                showDialog(
+                  context: context,
+                  builder: (context){
+                    return MyDialog(
+                      title:'关于我们',
+                      content:'当地时间11日，亚利桑那州、新墨西哥州、阿肯色州和华盛顿特区都发表声明，宣布进入紧急状态。（海外网 张霓）当地时间11日，亚利桑那州、新墨西哥州、阿肯色州和华盛顿特区都发表声明，宣布进入紧急状态。（海外网 张霓） ');
+                  }
+                );
+              },
             ),
           ],
         ),
