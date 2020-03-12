@@ -71,6 +71,10 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/dialog');
             }),
+            MyButton('网络请求', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/http');
+            }),
           ],
         ));
   }

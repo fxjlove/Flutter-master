@@ -15,6 +15,7 @@ import '../form/Forms.dart';
 import '../date/DatePicker.dart';
 import '../swiper/Swiper.dart';
 import '../dialog/Dialog.dart';
+import '../http/Http.dart';
 
 
 
@@ -33,6 +34,7 @@ final routes={
       '/datePicker':(context)=>DatePickerPage(),
       '/swiper':(context)=>SwiperPage(),
       '/dialog':(context)=>DialogPage(),
+      '/http':(context)=>HttpPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),
