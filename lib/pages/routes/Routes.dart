@@ -13,6 +13,8 @@ import '../form/Radio.dart';
 import '../form/TextField.dart';
 import '../form/Forms.dart';
 import '../date/DatePicker.dart';
+import '../swiper/Swiper.dart';
+import '../dialog/Dialog.dart';
 
 
 
@@ -29,6 +31,8 @@ final routes={
       '/textField':(context)=>TextFieldPage(),
       '/forms':(context)=>FormsPage(),
       '/datePicker':(context)=>DatePickerPage(),
+      '/swiper':(context)=>SwiperPage(),
+      '/dialog':(context)=>DialogPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),

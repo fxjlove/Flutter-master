@@ -63,6 +63,14 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/datePicker');
             }),
+            MyButton('轮播图 flutter_swiper', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/swiper');
+            }),
+             MyButton('Dialog', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/dialog');
+            }),
           ],
         ));
   }
