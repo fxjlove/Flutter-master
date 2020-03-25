@@ -16,6 +16,14 @@ import '../date/DatePicker.dart';
 import '../swiper/Swiper.dart';
 import '../dialog/Dialog.dart';
 import '../http/Http.dart';
+import '../block/Block.dart';
+import '../listview/main_dynamic_listview_builder.3.dart';
+
+
+import '../layout/Layout.dart';
+import '../layout/Layout_Stack_Align.dart';
+import '../layout/Layout_Row_MainAxisAlignment.dart';
+import '../layout/Layout_Colum_Row.dart';
 
 
 
@@ -35,6 +43,13 @@ final routes={
       '/swiper':(context)=>SwiperPage(),
       '/dialog':(context)=>DialogPage(),
       '/http':(context)=>HttpPage(),
+      '/block':(context)=>BlockPage(),
+      '/listview':(context)=>ListviewBuilderPage(),
+
+      '/layout':(context)=>LayoutPage(),
+      '/layoutStackAlign':(context)=>LayoutStackAlignPage(),
+      '/layoutRowMainAxisAlignment':(context)=>LayoutRowMainAxisAlignmentPage(),
+      '/columRow':(context)=>LayoutColumRowPage(),
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),

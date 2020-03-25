@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'res/listData.dart';
+import 'package:fluttertest/res/listData.dart';
 
 //Flutter ListView动态列表组件 以及循环动态数据 -- 动态列表
 

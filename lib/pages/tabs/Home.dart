@@ -75,6 +75,18 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/http');
             }),
+             MyButton('block', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/block');
+            }),
+            MyButton('ListView', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/listview');
+            }),
+            MyButton('在Flutter中构建布局', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/layout');
+            }),
           ],
         ));
   }
