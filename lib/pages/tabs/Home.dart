@@ -87,6 +87,14 @@ class _HomePageState extends State<HomePage> {
               //路由跳转
               Navigator.pushNamed(context, '/layout');
             }),
+             MyButton('Callback', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/callback');
+            }),
+             MyButton('全局事件总线', pressed: () {
+              //路由跳转
+              Navigator.pushNamed(context, '/eventBus');
+            }),
           ],
         ));
   }

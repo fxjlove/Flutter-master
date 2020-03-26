@@ -25,6 +25,10 @@ import '../layout/Layout_Stack_Align.dart';
 import '../layout/Layout_Row_MainAxisAlignment.dart';
 import '../layout/Layout_Colum_Row.dart';
 
+import '../callback/News.dart';
+import '../eventbus/Detail.dart';
+import '../eventbus/Main.dart';
+
 
 
 //配置路由
@@ -50,6 +54,11 @@ final routes={
       '/layoutStackAlign':(context)=>LayoutStackAlignPage(),
       '/layoutRowMainAxisAlignment':(context)=>LayoutRowMainAxisAlignmentPage(),
       '/columRow':(context)=>LayoutColumRowPage(),
+
+      '/callback':(context)=>NewsPage(),
+      '/eventBus':(context)=>MainPage(),
+      '/detail':(context)=>DetailPage(),
+
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
       // '/search':(context,{arguments})=>SearchPage(arguments:arguments),
