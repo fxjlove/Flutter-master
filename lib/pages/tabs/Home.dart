@@ -96,6 +96,11 @@ class _HomePageState extends State<HomePage> {
                   //路由跳转
                   Navigator.pushNamed(context, '/listview');
                 }),
+                
+                 MyButton('下拉刷新 上拉加载更多', pressed: () {
+                  //路由跳转
+                  Navigator.pushNamed(context, '/refreshIndicator');
+                }),
                 MyButton('在Flutter中构建布局', pressed: () {
                   //路由跳转
                   Navigator.pushNamed(context, '/layout');
