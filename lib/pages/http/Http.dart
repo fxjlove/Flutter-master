@@ -1,56 +1,70 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'dart:convert' as convert;
-import 'package:http/http.dart' as http;
 
-//渲染动态数据
-class HttpPage extends StatefulWidget {
-  HttpPage({Key key}) : super(key: key);
-
-  _HttpPageState createState() => _HttpPageState();
-}
-
-class _HttpPageState extends State<HttpPage> {
-  List _list = [];
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    this._getData();
-  }
-
-  _getData() async {
-    var apiUrl = "http://a.itying.com/api/productlist";
-    var result = await http.get(apiUrl);
-    if (result.statusCode == 200) {
-      print(result.body);
-      setState(() {
-        this._list = json.decode(result.body)['result'];
-      });
-    } else {
-      print("失败${result.statusCode}");
-    }
-  }
+class HttpPage extends StatelessWidget {
+  const HttpPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('请求数据'),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('shared_preferences'),
       ),
-      body: this._list.length > 0
-          ? ListView.builder(
-            itemCount: this._list.length,
-            itemBuilder: (context,index){
-                return ListTile(
-                  title: Text('${this._list[index]['title']}'),
-                );
-            },
-          )
-          : Text('加载中...'),
+      body: new Center(
+        child: Column(
+          children: <Widget>[
+            RaisedButton(
+              child: Text('Flutter http get请求数据、post提交数据、'),
+              onPressed: () {
+                  Navigator.pushNamed(context, '/httpGet');
+              },
+            ),
+            RaisedButton(
+              child: Text('HTTP请求-HttpClient'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpClient');
+              },
+            ),
+             RaisedButton(
+              child: Text('HTTP请求-HttpClient 2'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpClientT');
+              },
+            ),
+            RaisedButton(
+              child: Text('Http请求-Dio http库'),
+              onPressed: () {
+               Navigator.pushNamed(context, '/dio');
+              },
+            ),
+            RaisedButton(
+              child: Text('Http分块下载'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpGet');
+              },
+            ),
+            RaisedButton(
+              child: Text('使用WebSockets'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpGet');
+              },
+            ),
+              RaisedButton(
+              child: Text('使用Socket API'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpGet');
+              },
+              
+            ),
+             RaisedButton(
+              child: Text('Json转Dart Model类'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/httpGet');
+              },
+              
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
- 

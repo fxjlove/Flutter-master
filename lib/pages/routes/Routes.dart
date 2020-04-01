@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertest/pages/date/DatePicker.dart';
+import 'package:fluttertest/pages/http/HttpGet.dart';
 
 import '../tabs/Tabs.dart';
 import '../appbar/AppBar.dart';
@@ -14,7 +15,7 @@ import '../form/Forms.dart';
 import '../date/DatePicker.dart';
 import '../swiper/Swiper.dart';
 import '../dialog/Dialog.dart';
-import '../http/Http.dart';
+// import '../http/Http.dart';
 import '../block/Block.dart';
 import '../listview/main_dynamic_listview_builder.3.dart';
 
@@ -36,6 +37,12 @@ import '../scrollable/SingleChildScrollView.dart';
 import '../scrollable/CustomScrollView.dart';
 import '../scrollable/ScrollController.dart';
 
+import '../http/Http.dart';
+import '../http/HttpGet.dart';
+import '../http/HttpClient.dart';
+import '../http/HttpClientT.dart';
+import '../http/Dio.dart';
+
 
 
 //配置路由
@@ -53,7 +60,7 @@ final routes={
       '/datePicker':(context)=>DatePickerPage(),
       '/swiper':(context)=>SwiperPage(),
       '/dialog':(context)=>DialogPage(),
-      '/http':(context)=>HttpPage(),
+      // '/http':(context)=>HttpPage(),
       '/block':(context)=>BlockPage(),
       '/listview':(context)=>ListviewBuilderPage(),
 
@@ -72,6 +79,12 @@ final routes={
       '/singleChildScrollView':(context)=>SingleChildScrollViewPage(),
       '/customScrollView':(context)=>CustomScrollViewPage(),
       '/scrollController':(context)=>ScrollControllerPage(),
+
+      '/http':(context)=>HttpPage(),
+      '/httpGet':(context)=>HttpGetPage(),
+      '/httpClient':(context)=>HttpClientPage(),
+      '/httpClientT':(context)=>HttpClientTPage(),
+      '/dio':(context)=>DioPage(),
 
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
