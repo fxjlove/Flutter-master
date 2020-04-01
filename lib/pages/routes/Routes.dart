@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertest/pages/date/DatePicker.dart';
 
-
 import '../tabs/Tabs.dart';
 import '../appbar/AppBar.dart';
 import '../appbar/TopTab.dart';
@@ -30,6 +29,12 @@ import '../eventbus/Detail.dart';
 import '../eventbus/Main.dart';
 
 import '../sharedpreferences/SharedPreferences.dart';
+
+import '../scrollable/Scrollable.dart';
+// import 'package:fluttertest/pages/scrollable/SingleChildScrollView.dart';
+import '../scrollable/SingleChildScrollView.dart';
+import '../scrollable/CustomScrollView.dart';
+import '../scrollable/ScrollController.dart';
 
 
 
@@ -61,6 +66,12 @@ final routes={
       '/eventBus':(context)=>MainPage(),
       '/detail':(context)=>DetailPage(),
       '/shared_preferences':(context)=>SharePreferencesPage(),
+
+      //可滚动组件
+      '/scrollable':(context)=>ScrollablePage(),
+      '/singleChildScrollView':(context)=>SingleChildScrollViewPage(),
+      '/customScrollView':(context)=>CustomScrollViewPage(),
+      '/scrollController':(context)=>ScrollControllerPage(),
 
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),

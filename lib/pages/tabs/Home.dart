@@ -112,6 +112,11 @@ class _HomePageState extends State<HomePage> {
                   //路由跳转
                   Navigator.pushNamed(context, '/shared_preferences');
                 }),
+                MyButton('可滚动组件', pressed: () {
+                  //路由跳转
+                  Navigator.pushNamed(context, '/scrollable');
+                }),
+                
               ],
             )));
   }
