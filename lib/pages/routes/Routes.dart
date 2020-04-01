@@ -29,6 +29,8 @@ import '../callback/News.dart';
 import '../eventbus/Detail.dart';
 import '../eventbus/Main.dart';
 
+import '../sharedpreferences/SharedPreferences.dart';
+
 
 
 //配置路由
@@ -58,6 +60,7 @@ final routes={
       '/callback':(context)=>NewsPage(),
       '/eventBus':(context)=>MainPage(),
       '/detail':(context)=>DetailPage(),
+      '/shared_preferences':(context)=>SharePreferencesPage(),
 
       // '/productDetail':(context,{arguments})=>ProductDetailPage(arguments:arguments),
       //  '/customer':(context,{arguments})=>CustomerPage(arguments:arguments),
